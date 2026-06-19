@@ -124,12 +124,15 @@
   const featured = document.querySelector('.feature-video[data-yt]');
   if (featured) {
     const id = featured.getAttribute('data-yt');
+    const list = featured.getAttribute('data-list');
     const frame = featured.querySelector('[data-embed]');
     const playBtn = featured.querySelector('.feature-video__play');
     if (id && frame && playBtn) {
       playBtn.addEventListener('click', () => {
+        let src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+        if (list) src += `&list=${list}`;
         const iframe = document.createElement('iframe');
-        iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+        iframe.src = src;
         iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
         iframe.allowFullscreen = true;
         iframe.setAttribute('title', 'Featured video');
