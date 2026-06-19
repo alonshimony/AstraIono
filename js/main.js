@@ -179,12 +179,13 @@
     });
   });
 
-  /* ---------- Newsletter (front-end stub) ---------- */
+  /* ---------- Newsletter (Vercel serverless: POST /api/subscribe) ---------- */
   const form = document.getElementById('signupForm');
   if (form) {
     const note = document.getElementById('signupNote');
     const input = document.getElementById('signupEmail');
-    form.addEventListener('submit', (e) => {
+    const btn = form.querySelector('button[type="submit"]');
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const val = (input.value || '').trim();
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
@@ -193,9 +194,32 @@
         input.focus();
         return;
       }
-      note.textContent = 'You’re on the frequency. Watch your inbox for the next transmission.';
       note.style.color = '';
-      form.reset();
+      note.textContent = 'Tuning you in…';
+      if (btn) btn.disabled = true;
+      try {
+        const r = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: val })
+        });
+        const data = await r.json().catch(() => ({}));
+        if (r.ok) {
+          note.style.color = '';
+          note.textContent = data.alreadySubscribed
+            ? 'You’re already on the frequency — see you in the inbox.'
+            : 'You’re on the frequency. Watch your inbox for the next transmission.';
+          form.reset();
+        } else {
+          note.style.color = '#ff7aa8';
+          note.textContent = (data && data.error) || 'Something glitched — please try again.';
+        }
+      } catch {
+        note.style.color = '#ff7aa8';
+        note.textContent = 'Network error — please try again.';
+      } finally {
+        if (btn) btn.disabled = false;
+      }
     });
   }
 

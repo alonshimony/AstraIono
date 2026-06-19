@@ -69,9 +69,9 @@ Swap each `background` for `url('assets/your-image.jpg')` (with
 `background-size: cover; background-position: center;`) to use real cinematic frames.
 
 ### Newsletter
-`#signupForm` in `js/main.js` validates the email client-side and shows a success
-message. Wire the marked `TODO` to a real provider (Mailchimp / ConvertKit / your
-endpoint) when ready.
+The signup form posts to a Vercel Serverless Function (`api/subscribe.js`) that
+stores emails in Vercel KV. One-time setup (create a KV store and connect it) is
+in **[NEWSLETTER.md](NEWSLETTER.md)**.
 
 ## Sections
 1. **Hero** — neon logo, tagline, primary CTAs, particle field
