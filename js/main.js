@@ -121,11 +121,30 @@
   }
 
   /* ---------- Lazy YouTube: featured ---------- */
+  // Paint a YouTube video's poster/cover art onto an element's background,
+  // preferring the HD frame and falling back to the always-present hqdefault.
+  function setYouTubeThumb(el, vid) {
+    if (!el || !vid) return;
+    const apply = (url) => {
+      el.style.backgroundImage = `url('${url}')`;
+      el.style.backgroundSize = 'cover';
+      el.style.backgroundPosition = 'center';
+    };
+    const max = `https://img.youtube.com/vi/${vid}/maxresdefault.jpg`;
+    const hq = `https://img.youtube.com/vi/${vid}/hqdefault.jpg`;
+    const probe = new Image();
+    // YouTube serves a 120x90 gray placeholder when maxres is unavailable.
+    probe.onload = () => apply(probe.naturalWidth > 120 ? max : hq);
+    probe.onerror = () => apply(hq);
+    probe.src = max;
+  }
+
   const featured = document.querySelector('.feature-video[data-yt]');
   if (featured) {
     const id = featured.getAttribute('data-yt');
     const frame = featured.querySelector('[data-embed]');
     const playBtn = featured.querySelector('.feature-video__play');
+    if (id && frame) setYouTubeThumb(frame, id);
     if (id && frame && playBtn) {
       playBtn.addEventListener('click', () => {
         const iframe = document.createElement('iframe');
@@ -145,6 +164,7 @@
   document.querySelectorAll('.video-tile[data-yt]').forEach((tile) => {
     const vid = tile.getAttribute('data-yt');
     if (!vid) return; // empty → leave as a normal link to the channel
+    setYouTubeThumb(tile, vid);
     tile.addEventListener('click', (e) => {
       if (tile.dataset.loaded) return;
       e.preventDefault();
