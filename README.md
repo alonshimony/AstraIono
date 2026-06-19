@@ -77,7 +77,7 @@ endpoint) when ready.
 1. **Hero** — neon logo, tagline, primary CTAs, particle field
 2. **Feel the Frequency** — song preview cards (Spotify embeds)
 3. **Watch the Vision** — featured video + grid (YouTube)
-4. **The Story** — bio, meaning of the name, mission, *The Balance*
+4. **The Story** — bio, meaning of the name, mission, what to expect
 5. **The Visual Universe** — parallax gallery
 6. **Featured Releases** — release cards
 7. **The Belief** — the Astra Iono mantra
