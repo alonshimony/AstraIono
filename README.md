@@ -32,15 +32,21 @@ double-outline wordmark, pink energy slash, "Feel the Frequency" plate).
 
 ## Plugging in real content
 
-Everything is wired with clearly-marked placeholders. To go live:
-
-### Spotify song previews — `index.html`
-Each `.song-card` has a `data-spotify=""` attribute. Drop in a Spotify **track ID**
-(the part after `open.spotify.com/track/`) and the embedded player builds itself:
+### Spotify — wired ✅
+The 14 song cards in **Feel the Frequency** and the highlighted **Featured Releases**
+are connected to the real debut album
+([`open.spotify.com/album/6OkM4ifRfdqEJf3EVmogzr`](https://open.spotify.com/album/6OkM4ifRfdqEJf3EVmogzr)).
+Each `.song-card` carries the real `data-spotify="<trackID>"`, and the embedded
+player lazy-loads when the card scrolls into view:
 
 ```html
-<article class="song-card" data-spotify="4cOdK2wGLETKBW3PvgPWqT">
+<article class="song-card" data-spotify="09Zesf3j0PrJ29oJ8M2fao">
 ```
+
+To add or reorder tracks, copy a `.song-card` block and set its `data-spotify`
+to the track ID (the part after `open.spotify.com/track/`) — the player builds itself.
+
+### Still on placeholders
 
 ### YouTube videos — `index.html`
 The featured video (`.feature-video`) and each `.video-tile` have a `data-yt=""`
@@ -53,9 +59,9 @@ attribute. Add a YouTube **video ID**:
 The featured video lazy-loads on click (privacy-friendly `youtube-nocookie`).
 
 ### Links
-Buttons use `data-link="spotify|youtube|instagram|apple|tiktok"`. Replace the
-placeholder `href` values (currently `https://open.spotify.com`, `https://youtube.com`,
-etc.) with the real Astra Iono profile URLs.
+Spotify links point to the real album. YouTube / Instagram / Apple Music / TikTok
+still use placeholder `href` values (`https://youtube.com`, etc.) tagged with
+`data-link="youtube|instagram|apple|tiktok"` — swap them for the real profile URLs.
 
 ### Gallery visuals — `css/styles.css`
 The Visual Universe tiles (`.g1`–`.g6`) currently use generated gradient art.
