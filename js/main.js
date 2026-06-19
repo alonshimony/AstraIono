@@ -140,9 +140,27 @@
         featured.classList.add('is-playing');
       }, { once: true });
     } else if (playBtn && !id) {
-      playBtn.addEventListener('click', () => window.open('https://youtube.com', '_blank', 'noopener'));
+      playBtn.addEventListener('click', () => window.open('https://www.youtube.com/@AstraIono', '_blank', 'noopener'));
     }
   }
+
+  /* ---------- Video-grid tiles: play inline when they have a real ID ---------- */
+  document.querySelectorAll('.video-tile[data-yt]').forEach((tile) => {
+    const vid = tile.getAttribute('data-yt');
+    if (!vid) return; // empty → leave as a normal link to the channel
+    tile.addEventListener('click', (e) => {
+      if (tile.dataset.loaded) return;
+      e.preventDefault();
+      tile.dataset.loaded = '1';
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube-nocookie.com/embed/${vid}?autoplay=1&rel=0`;
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.setAttribute('title', 'Music video');
+      tile.appendChild(iframe);
+      tile.classList.add('is-playing');
+    });
+  });
 
   /* ---------- Newsletter (front-end stub) ---------- */
   const form = document.getElementById('signupForm');
