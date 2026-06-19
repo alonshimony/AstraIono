@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Astra Iono — Feel the Frequency</title>
+  <meta name="description" content="Astra Iono is more than a name — it's a frequency. A cinematic, multi-genre music project by Alon Shimony blending rap, pop, emotional ballads and cinematic country into a universe of energy, emotion and storytelling." />
+  <meta name="theme-color" content="#050816" />
+
+  <!-- Social / Open Graph -->
+  <meta property="og:title" content="Astra Iono — Feel the Frequency" />
+  <meta property="og:description" content="Music. Energy. Emotion. Frequency. Enter the Astra Iono universe." />
+  <meta property="og:type" content="music.musician" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Cinematic intro veil -->
+  <div class="intro-veil" id="introVeil">
+    <div class="intro-core"></div>
+    <div class="intro-word">ASTRA IONO</div>
+  </div>
+
+  <!-- Animated ambient background layers -->
+  <div class="bg-field" aria-hidden="true">
+    <canvas id="particleCanvas"></canvas>
+    <div class="bg-aurora"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-fog"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#hero" aria-label="Astra Iono home">
+      <img src="assets/logo-mark.svg" alt="Astra Iono" />
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#frequency">Music</a>
+      <a href="#vision">Videos</a>
+      <a href="#story">Story</a>
+      <a href="#universe">Universe</a>
+      <a href="#releases">Releases</a>
+      <a class="nav__cta" href="#connect">Follow</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- 1. HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__halo"></div>
+      <div class="hero__inner">
+        <p class="hero__eyebrow reveal" data-reveal>A cinematic music universe by Alon Shimony</p>
+        <h1 class="hero__logo reveal" data-reveal>
+          <img src="assets/logo.svg" alt="Astra Iono — Feel the Frequency" />
+        </h1>
+        <p class="hero__tagline reveal" data-reveal>
+          <span>Music.</span><span>Energy.</span><span>Emotion.</span><span>Frequency.</span>
+        </p>
+        <div class="hero__cta reveal" data-reveal>
+          <a class="btn btn--primary" href="https://youtube.com" target="_blank" rel="noopener" data-link="youtube">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.8-.5-5.6a2.9 2.9 0 0 0-2-2C18.7 4 12 4 12 4s-6.7 0-8.5.5a2.9 2.9 0 0 0-2 2C1 8.2 1 12 1 12s0 3.8.5 5.6a2.9 2.9 0 0 0 2 2C5.3 20 12 20 12 20s6.7 0 8.5-.5a2.9 2.9 0 0 0 2-2C23 15.8 23 12 23 12zM9.8 15.5v-7l6 3.5-6 3.5z"/></svg>
+            Watch on YouTube
+          </a>
+          <a class="btn btn--spotify" href="https://open.spotify.com" target="_blank" rel="noopener" data-link="spotify">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.6 14.4a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.63.63 0 0 1-.28-1.22c3.82-.87 7.1-.5 9.72 1.1.3.18.39.58.21.87zm1.23-2.74a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.16a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.57 11.24 1.32.37.22.49.7.25 1.07zm.11-2.85C14.83 8.97 9.4 8.79 6.3 9.73a.94.94 0 1 1-.54-1.8c3.56-1.08 9.56-.87 13.33 1.37a.94.94 0 0 1-.96 1.61z"/></svg>
+            Listen on Spotify
+          </a>
+          <a class="btn btn--ghost" href="#frequency">Explore the Sound</a>
+        </div>
+      </div>
+      <a class="hero__scroll" href="#frequency" aria-label="Scroll down">
+        <span class="hero__scroll-dot"></span>
+        Scroll
+      </a>
+    </section>
+
+    <!-- 2. FEEL THE FREQUENCY (music previews) -->
+    <section class="section" id="frequency">
+      <div class="section__head reveal" data-reveal>
+        <p class="kicker">01 — The Sound</p>
+        <h2 class="section__title">Feel the Frequency</h2>
+        <p class="section__sub">Preview selected songs from the Astra Iono universe.</p>
+      </div>
+
+      <div class="songs">
+        <!-- To use real songs: replace data-spotify with a Spotify track/episode ID
+             (open.spotify.com/track/<ID>) — the embed builds automatically. -->
+        <article class="song-card reveal" data-reveal data-spotify="">
+          <div class="song-card__wave" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="song-card__body">
+            <p class="song-card__genre">Cinematic Rap</p>
+            <h3 class="song-card__title">Signal</h3>
+            <p class="song-card__desc">A charged opener — raw verses and a soaring hook about becoming the frequency you want to attract.</p>
+          </div>
+          <div class="song-card__embed" data-embed></div>
+          <a class="song-card__link" href="https://open.spotify.com" target="_blank" rel="noopener" data-link="spotify">Listen on Spotify →</a>
+        </article>
+
+        <article class="song-card reveal" data-reveal data-spotify="">
+          <div class="song-card__wave" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="song-card__body">
+            <p class="song-card__genre">Emotional Pop</p>
+            <h3 class="song-card__title">Gravity</h3>
+            <p class="song-card__desc">A powerful pop hook wrapped in warm, golden-hour energy — about holding your balance when everything pulls.</p>
+          </div>
+          <div class="song-card__embed" data-embed></div>
+          <a class="song-card__link" href="https://open.spotify.com" target="_blank" rel="noopener" data-link="spotify">Listen on Spotify →</a>
+        </article>
+
+        <article class="song-card reveal" data-reveal data-spotify="">
+          <div class="song-card__wave" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="song-card__body">
+            <p class="song-card__genre">Cinematic Country Ballad</p>
+            <h3 class="song-card__title">Stardust Road</h3>
+            <p class="song-card__desc">A haunting ballad — soft and human, a transmission from a character inside The Balance.</p>
+          </div>
+          <div class="song-card__embed" data-embed></div>
+          <a class="song-card__link" href="https://open.spotify.com" target="_blank" rel="noopener" data-link="spotify">Listen on Spotify →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. WATCH THE VISION (videos) -->
+    <section class="section" id="vision">
+      <div class="section__head reveal" data-reveal>
+        <p class="kicker">02 — The Vision</p>
+        <h2 class="section__title">Watch the Vision</h2>
+        <p class="section__sub">Music videos that bring the Astra Iono world to life.</p>
+      </div>
+
+      <!-- Featured video. Replace data-yt with a YouTube video ID to embed it. -->
+      <figure class="feature-video reveal" data-reveal data-yt="">
+        <div class="feature-video__frame" data-embed>
+          <button class="feature-video__play" aria-label="Play featured video">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <div class="feature-video__meta">
+            <p class="feature-video__tag">Featured film</p>
+            <h3 class="feature-video__title">Astra Iono — Official Visual</h3>
+          </div>
+        </div>
+      </figure>
+
+      <div class="video-grid">
+        <a class="video-tile reveal" data-reveal data-yt="" href="https://youtube.com" target="_blank" rel="noopener" data-link="youtube">
+          <span class="video-tile__play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="video-tile__title">The Balance — Prologue</span>
+        </a>
+        <a class="video-tile reveal" data-reveal data-yt="" href="https://youtube.com" target="_blank" rel="noopener" data-link="youtube">
+          <span class="video-tile__play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="video-tile__title">Gravity — Visualizer</span>
+        </a>
+        <a class="video-tile reveal" data-reveal data-yt="" href="https://youtube.com" target="_blank" rel="noopener" data-link="youtube">
+          <span class="video-tile__play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="video-tile__title">Live Energy Session</span>
+        </a>
+      </div>
+
+      <div class="section__action reveal" data-reveal>
+        <a class="btn btn--primary" href="https://youtube.com" target="_blank" rel="noopener" data-link="youtube">Watch on YouTube</a>
+      </div>
+    </section>
+
+    <!-- 4. THE STORY -->
+    <section class="section story" id="story">
+      <div class="story__grid">
+        <div class="story__intro reveal" data-reveal>
+          <p class="kicker">03 — The Story</p>
+          <h2 class="section__title">More than a name.<br/>It's a frequency.</h2>
+          <p class="story__lead">
+            Astra Iono is a multi-genre music project by <strong>Alon Shimony</strong>, blending rap, pop,
+            soft pop, emotional ballads and cinematic country into an emotionally charged soundscape rooted
+            in purpose, transformation and storytelling.
+          </p>
+          <p class="story__body">
+            Each song is part of a larger emotional universe — a journey through ambition, pain, hope,
+            manifestation and inner balance. From the raw punch of rap to haunting country ballads,
+            it's a soundtrack for anyone moving through inner transformation.
+          </p>
+        </div>
+
+        <div class="meaning">
+          <div class="meaning__card reveal" data-reveal>
+            <span class="meaning__sym">ASTRA</span>
+            <p>From Latin — <em>of the stars</em>. A beacon of vision, fate and higher power.</p>
+          </div>
+          <div class="meaning__card reveal" data-reveal>
+            <span class="meaning__sym">IONO</span>
+            <p>Echoing <em>ions</em> — the charged particles that move energy and emotion through the universe.</p>
+          </div>
+          <div class="meaning__fuse reveal" data-reveal>
+            Together they are <strong>star-powered energy</strong> — a musical current meant to uplift, align and inspire.
+          </div>
+        </div>
+      </div>
+
+      <!-- The Balance -->
+      <div class="balance reveal" data-reveal>
+        <div class="balance__text">
+          <p class="kicker">Connected to</p>
+          <h3>The Balance</h3>
+          <p>
+            An original cinematic universe and future AI-generated film by Alon Shimony. The songs released
+            under Astra Iono are fragments of that world — musical transmissions from its characters, emotions
+            and storylines. Don't just listen. Become part of a larger, unfolding myth.
+          </p>
+        </div>
+        <ul class="balance__list">
+          <li>Multi-genre tracks with emotional power</li>
+          <li>Collaborations with vocalists from different worlds</li>
+          <li>Soundtracks &amp; concept albums tied to The Balance</li>
+          <li>Music videos powered by AI &amp; cinematic storytelling</li>
+          <li>Future experiences in visualization &amp; intention setting</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5. THE VISUAL UNIVERSE (parallax gallery) -->
+    <section class="section universe" id="universe">
+      <div class="section__head reveal" data-reveal>
+        <p class="kicker">04 — The Visuals</p>
+        <h2 class="section__title">The Visual Universe</h2>
+        <p class="section__sub">Float through cinematic frames from the Astra Iono world.</p>
+      </div>
+
+      <div class="gallery" id="gallery">
+        <figure class="gallery__item g1" data-depth="0.12"><span class="gallery__label">Floating Energy</span></figure>
+        <figure class="gallery__item g2" data-depth="0.22"><span class="gallery__label">Sound as Light</span></figure>
+        <figure class="gallery__item g3" data-depth="0.08"><span class="gallery__label">Golden Hour</span></figure>
+        <figure class="gallery__item g4" data-depth="0.18"><span class="gallery__label">The Signal</span></figure>
+        <figure class="gallery__item g5" data-depth="0.14"><span class="gallery__label">Frequency Field</span></figure>
+        <figure class="gallery__item g6" data-depth="0.20"><span class="gallery__label">Inner Balance</span></figure>
+      </div>
+    </section>
+
+    <!-- 6. FEATURED RELEASES -->
+    <section class="section" id="releases">
+      <div class="section__head reveal" data-reveal>
+        <p class="kicker">05 — The Catalog</p>
+        <h2 class="section__title">Featured Releases</h2>
+        <p class="section__sub">Current and upcoming transmissions from the universe.</p>
+      </div>
+
+      <div class="releases">
+        <article class="release reveal" data-reveal>
+          <div class="release__art art-1"><span class="release__badge">New</span></div>
+          <div class="release__info">
+            <h3>Signal</h3>
+            <p class="release__mood">Cinematic Rap · Empowerment</p>
+            <div class="release__actions">
+              <a class="btn btn--sm btn--spotify" href="https://open.spotify.com" target="_blank" rel="noopener" data-link="spotify">Listen</a>
+              <a class="btn btn--sm btn--ghost" href="https://youtube.com" target="_blank" rel="noopener" data-link="youtube">Watch</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="release reveal" data-reveal>
+          <div class="release__art art-2"></div>
+          <div class="release__info">
+            <h3>Gravity</h3>
+            <p class="release__mood">Emotional Pop · Resilience</p>
+            <div class="release__actions">
+              <a class="btn btn--sm btn--spotify" href="https://open.spotify.com" target="_blank" rel="noopener" data-link="spotify">Listen</a>
+              <a class="btn btn--sm btn--ghost" href="https://youtube.com" target="_blank" rel="noopener" data-link="youtube">Watch</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="release reveal" data-reveal>
+          <div class="release__art art-3"></div>
+          <div class="release__info">
+            <h3>Stardust Road</h3>
+            <p class="release__mood">Cinematic Country · Hope</p>
+            <div class="release__actions">
+              <a class="btn btn--sm btn--spotify" href="https://open.spotify.com" target="_blank" rel="noopener" data-link="spotify">Listen</a>
+              <a class="btn btn--sm btn--ghost" href="https://open.spotify.com" target="_blank" rel="noopener" data-link="spotify">Pre-save</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="release reveal" data-reveal>
+          <div class="release__art art-4"><span class="release__badge release__badge--soon">Soon</span></div>
+          <div class="release__info">
+            <h3>The Balance</h3>
+            <p class="release__mood">Concept Album · Coming Soon</p>
+            <div class="release__actions">
+              <a class="btn btn--sm btn--ghost" href="#connect">Get Notified</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. THE BELIEF -->
+    <section class="belief reveal" data-reveal id="belief">
+      <div class="belief__mantra">
+        <p>Music is alignment.</p>
+        <p>Vibration is power.</p>
+        <p class="belief__highlight">You are the signal.</p>
+      </div>
+      <p class="belief__line">
+        Astra Iono exists to help you remember what you're capable of — to amplify your emotions,
+        charge your thoughts, and guide you back into balance, one song at a time.
+      </p>
+    </section>
+
+    <!-- 8. FINAL CTA -->
+    <section class="connect" id="connect">
+      <div class="connect__core" aria-hidden="true"></div>
+      <div class="connect__inner reveal" data-reveal>
+        <h2>Enter the frequency.<br/>Follow the journey.</h2>
+        <div class="connect__cta">
+          <a class="btn btn--spotify" href="https://open.spotify.com" target="_blank" rel="noopener" data-link="spotify">Listen on Spotify</a>
+          <a class="btn btn--primary" href="https://youtube.com" target="_blank" rel="noopener" data-link="youtube">Subscribe on YouTube</a>
+          <a class="btn btn--ghost" href="https://instagram.com" target="_blank" rel="noopener" data-link="instagram">Follow Astra Iono</a>
+        </div>
+
+        <!-- Newsletter / fan signup (front-end stub — wire to a provider later) -->
+        <form class="signup" id="signupForm" novalidate>
+          <label class="signup__label" for="signupEmail">Join the frequency — get new transmissions first.</label>
+          <div class="signup__row">
+            <input type="email" id="signupEmail" name="email" placeholder="your@email.com" autocomplete="email" required />
+            <button type="submit" class="btn btn--primary">Sign Up</button>
+          </div>
+          <p class="signup__note" id="signupNote" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <img src="assets/logo-mark.svg" alt="Astra Iono" />
+      <p>Feel the Frequency.</p>
+    </div>
+    <nav class="footer__social" aria-label="Social links">
+      <a href="https://open.spotify.com" target="_blank" rel="noopener" data-link="spotify" aria-label="Spotify">Spotify</a>
+      <a href="https://youtube.com" target="_blank" rel="noopener" data-link="youtube" aria-label="YouTube">YouTube</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" data-link="instagram" aria-label="Instagram">Instagram</a>
+      <a href="https://music.apple.com" target="_blank" rel="noopener" data-link="apple" aria-label="Apple Music">Apple Music</a>
+      <a href="https://tiktok.com" target="_blank" rel="noopener" data-link="tiktok" aria-label="TikTok">TikTok</a>
+    </nav>
+    <p class="footer__copy">© <span id="year"></span> Astra Iono — a music project by Alon Shimony. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
