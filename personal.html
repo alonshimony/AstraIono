@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Astra Iono — Feel the Frequency</title>
+  <meta name="description" content="Astra Iono — music, energy, emotion, frequency. Watch on YouTube, listen on Spotify." />
+  <meta name="theme-color" content="#04060f" />
+
+  <meta property="og:title" content="Astra Iono — Feel the Frequency" />
+  <meta property="og:description" content="Enter the frequency. Watch on YouTube · Listen on Spotify." />
+  <meta property="og:type" content="music.musician" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/personal.css" />
+</head>
+<body>
+  <div class="stage" id="stage">
+    <!-- ambient background -->
+    <canvas id="px" class="px" aria-hidden="true"></canvas>
+    <div class="aurora" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <!-- cursor-driven moving light -->
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+    <main class="hero" id="hero">
+      <a class="brand" href="index.html" aria-label="Astra Iono">
+        <img src="assets/logo-mark.svg" alt="Astra Iono" />
+      </a>
+
+      <!-- The centered portrait wrapped in living light -->
+      <div class="portal" id="portal" aria-hidden="false">
+        <div class="portal__halo" aria-hidden="true"></div>
+        <div class="portal__rays" aria-hidden="true"></div>
+        <div class="portal__floor" aria-hidden="true"></div>
+        <figure class="portal__figure">
+          <img class="portal__img" src="assets/artist.png" alt="Astra Iono levitating in a field of energy"
+               onerror="this.onerror=null;this.src='assets/artist-placeholder.svg';this.classList.add('is-placeholder')" />
+        </figure>
+        <div class="portal__sparks" id="sparks" aria-hidden="true"></div>
+      </div>
+
+      <h1 class="wordmark">ASTRA IONO</h1>
+      <p class="tagline"><span>Music.</span><span>Energy.</span><span>Emotion.</span><span>Frequency.</span></p>
+
+      <nav class="cta" aria-label="Listen and watch">
+        <a class="btn btn--yt" href="https://www.youtube.com/@AstraIono" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.8-.5-5.6a2.9 2.9 0 0 0-2-2C18.7 4 12 4 12 4s-6.7 0-8.5.5a2.9 2.9 0 0 0-2 2C1 8.2 1 12 1 12s0 3.8.5 5.6a2.9 2.9 0 0 0 2 2C5.3 20 12 20 12 20s6.7 0 8.5-.5a2.9 2.9 0 0 0 2-2C23 15.8 23 12 23 12zM9.8 15.5v-7l6 3.5-6 3.5z"/></svg>
+          <span>Watch on YouTube</span>
+        </a>
+        <a class="btn btn--sp" href="https://open.spotify.com/album/6OkM4ifRfdqEJf3EVmogzr" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.6 14.4a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.63.63 0 0 1-.28-1.22c3.82-.87 7.1-.5 9.72 1.1.3.18.39.58.21.87zm1.23-2.74a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.16a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.57 11.24 1.32.37.22.49.7.25 1.07zm.11-2.85C14.83 8.97 9.4 8.79 6.3 9.73a.94.94 0 1 1-.54-1.8c3.56-1.08 9.56-.87 13.33 1.37a.94.94 0 0 1-.96 1.61z"/></svg>
+          <span>Listen on Spotify</span>
+        </a>
+      </nav>
+
+      <nav class="more" aria-label="More platforms">
+        <a href="https://music.apple.com/us/artist/astra-iono-project/1832484773" target="_blank" rel="noopener">Apple Music</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://music.youtube.com/channel/UC3JItqV908gg411ZiYq4Lzg" target="_blank" rel="noopener">YouTube Music</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://www.deezer.com/us/album/803106581" target="_blank" rel="noopener">Deezer</a>
+        <span aria-hidden="true">·</span>
+        <a href="index.html">Full site</a>
+      </nav>
+    </main>
+  </div>
+
+  <script src="js/personal.js"></script>
+</body>
+</html>

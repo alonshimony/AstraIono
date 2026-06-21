@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 820" width="600" height="820" role="img" aria-label="Astra Iono portrait placeholder">
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2a55"/>
+      <stop offset="0.55" stop-color="#0e1838"/>
+      <stop offset="1" stop-color="#070c20"/>
+    </linearGradient>
+    <radialGradient id="rim" cx="50%" cy="30%" r="70%">
+      <stop offset="0" stop-color="#4fd6ff" stop-opacity="0.55"/>
+      <stop offset="0.6" stop-color="#7b5cff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7b5cff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Upper-body silhouette -->
+  <g fill="url(#body)" stroke="#4fd6ff" stroke-opacity="0.35" stroke-width="2">
+    <circle cx="300" cy="210" r="118"/>
+    <path d="M300 330
+             C 196 330, 118 404, 96 520
+             C 80 606, 84 712, 96 820
+             L 504 820
+             C 516 712, 520 606, 504 520
+             C 482 404, 404 330, 300 330 Z"/>
+  </g>
+  <ellipse cx="300" cy="250" rx="280" ry="320" fill="url(#rim)"/>
+  <text x="300" y="470" text-anchor="middle" fill="#7e93c4" font-family="'Sora',sans-serif" font-size="26" letter-spacing="6" opacity="0.55">ASTRA IONO</text>
+  <text x="300" y="506" text-anchor="middle" fill="#52648f" font-family="'Inter',sans-serif" font-size="15" letter-spacing="2" opacity="0.7">add your photo → assets/artist.png</text>
+</svg>
